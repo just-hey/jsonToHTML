@@ -31,6 +31,5 @@ function objHandler(obj) {
   else {
     element += `${obj.content}`
   }
-  element += `</${obj.tag}>`
-  return element
+  return element += `</${obj.tag}>`
 }
