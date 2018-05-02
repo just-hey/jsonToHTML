@@ -14,7 +14,6 @@ function handleIncomingFiles(e) {
       fileArr.forEach(obj => {
         result += objHandler(obj)
       })
-      console.log(result)
       pageBody.innerHTML = result
     }
   }
