@@ -1,0 +1,32 @@
+body{
+  background-image: url('https://n6-img-fp.akamaized.net/free-vector/cute-cartoon-seamless-background-kawaii-style_6997-107.jpg?size=338&ext=jpg');
+  align: center;
+}
+
+.fileSelect {
+
+}
+
+li {
+  margin: 15px;
+  flex-direction: row;
+}
+
+.heading {
+  text-align: center;
+  box-shadow: 5px;
+  background-color: green;
+  color: red;
+}
+
+ul li {
+  display: inline;
+}
+
+section {
+  display: flex;
+  background-color: white;
+  border-style: solid;
+  border-width: medium;
+  padding: 15px;
+}
