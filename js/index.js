@@ -8,24 +8,23 @@ function handleIncomingFiles(e) {
   let targetArray = e.target.files
   for (var i = 0; i < targetArray.length; i++) {
     let reader = new FileReader()
-    reader.readAsText(targetArray[i], 'UTF-8')
+    reader.readAsText(targetArray[i], 'application/json')
     reader.onload = (evt) => {
       let fileArr = JSON.parse(evt.target.result)
       fileArr.forEach(obj => {
         result += objHandler(obj)
       })
+      console.log(result)
       pageBody.innerHTML = result
     }
   }
-
 }
-
 
 function objHandler(obj) {
   if (!obj) return
   let element = `<${obj.tag}>`
   if (Array.isArray(obj.content)) {
-    element += obj.content.map(e => objHandler(e))
+    element += obj.content.map(e => objHandler(e)).join('')
   }
   else if (typeof obj.content === 'object') {
     element += objHandler(obj.content)
